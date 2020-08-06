@@ -1,6 +1,5 @@
 import requests
 
-key = 'RGAPI-faefb9e4-8c28-455e-98d6-f94efbbf8fda'
 
 
 #ASKING USER FOR SUMMONER NAME
