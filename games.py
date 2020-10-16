@@ -1,6 +1,5 @@
 import requests
 
-
 class Game:
 
     def find_game_ids(self, accId, key, num_games):
@@ -12,7 +11,7 @@ class Game:
         # Adding 20 games into the list
         while num_games > 0:
             GAMEID.append('https://na1.api.riotgames.com/lol/match/v4/matches/'+str(response2.json()['matches'][i]['gameId']) + '?api_key=' + (key))
-            i = i + 1
+            i += 1
             num_games = num_games - 1
 
         return GAMEID
@@ -54,7 +53,6 @@ class Game:
         visions = sum(visions)/num_games
         csTotal = sum(csTotal)/num_games
         wins = sum(wins)/num_games
-        global stat_list
         stat_list = []
         stat_list.append(deaths) #0
         stat_list.append(kills) #1
@@ -62,4 +60,5 @@ class Game:
         stat_list.append(visions) #3
         stat_list.append(csTotal) #4
         stat_list.append(wins) #5
+
         return stat_list
