@@ -18,4 +18,3 @@ def is_player_good(winlist):
     elif winlist > 0.65:
         message = ['DUB!', 'You getting carried', 'His back gonna hurt a bit', 'winner winner chicken dinner', 'Dude wins TOO MUCH', 'You aint even gotta try', 'GODLIKE']
         return random.choice(message)
-
